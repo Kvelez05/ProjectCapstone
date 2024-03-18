@@ -1,38 +1,316 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  font-family: "Markazi Text", serif;
+}
+h1{
+  font-size: 40px;
+}
+h2 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  margin-top: 0px;
+}
+p {
+  margin-top: 0px;
+  font-size: 18px;
+}
+.five-pointed-star {
+  --star-color:orange;
+  margin:1em auto;
+  font-size:10em;
+  position: relative;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-right: 1em solid transparent;
+  border-bottom: 0.7em solid var(--star-color);
+  border-left: 1em solid transparent;
+  transform: rotate(35deg);
+ }
+ .five-pointed-star:before {
+  border-bottom: 0.8em solid var(--star-color);
+  border-left: 0.3em solid transparent;
+  border-right: 0.3em solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -0.45em;
+  left: -0.65em;
+  display: block;
+  content:"";
+  transform: rotate(-35deg);
+ }
+ .five-pointed-star:after {
+  position: absolute;
+  display: block;
+  top: 0.03em;
+  left: -1.05em;
+  width: 0;
+  height: 0;
+  border-right: 1em solid transparent;
+  border-bottom: 0.7em solid var(--star-color);
+  border-left: 1em solid transparent;
+  transform: rotate(-70deg);
+  content:"";
+ }
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+}
+nav {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 100%;
+}
+li {
+  text-decoration: none;
+}
+img {
+  border-radius: 16px;
+}
+nav ul {
+  display: flex;
+  vertical-align: middle;
+}
+nav div{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+nav img{
+  max-width: 300px;
+  height: auto;
+}
+nav li{
+  padding: 20px;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin: 0;
+}
+.footer-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.footer-links{
+  flex: 2;
+}
+
+
+@media only screen and (max-width: 950px) {
+  nav {
+    flex-direction: column;
+    justify-content: center;
+  }
+  nav div{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  footer {
+    flex-direction: column;
+  }
+
+}
+@media only screen and (max-width: 580px) {
+  nav ul {
+    display: grid;
+    grid-template-areas: 'nav-item1 nav-item2 nav-item3'
+                         'nav-item4 nav-item5 nav-item6';
+  }
+}
+.footer-links {
+  display: flex;
+}
+.footer-links div {
+  margin-left: auto;
+  margin-right: auto;
+}
+.call-to-action{
+  display: flex;
+  color: #F4CE14;
+  background-color: #495E57;
+  background-clip: content-box;
+}
+.call-to-action img{
+  max-width: 400px;
+}
+.call-to-action div{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+.call-to-action h2, .call-to-action p {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.specials{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrapxs;
+  padding: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+.specials-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.special-card {
+    width: 300px; /* Adjust as needed */
+    height: 400px; /* Adjust as needed */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #FCDABB;
+}
+
+.special-card img {
+    width: 100%;
+    height: 200px;
+    clip: inherit;
+    display: block;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-top: -10px; /* Negative margin to remove gap at the top */
+}
+
+.special-card-body {
+    padding: 10px 20px 20px 20px; /* Top 10px, Right 20px, Bottom 20px, Left 20px */
+}
+
+.star-rating{
+  display: flex;
+  font-size: 1.5px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.testimonials{
+  display: flex;
+  flex-direction: column;
+  background: #F4CE14;
+  padding: 50px;
+}
+.testimonials h1{
+  margin-left: auto;
+  margin-right: auto;
+}
+.testimonial-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.testimonial-card{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: white;
+  padding: 20px;
+  width: 300px;
+  height: 300px;
+  border-radius: 30px;
+}
+.testimonial-container img{
+  width: 100px;
+
+}
+.testimonial-card h3{
+  font-weight: lighter;
+}
+.star-rating + div {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.testimonial-container h3{
+  text-align: center;
+}
+.customer-info h2{
+  font-size: 30px;
+  font-weight: 900;
+}
+.main-button{
+  width: fit-content;
+  border-radius: 16px;
+  background: #F4CE14;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 30px 10px 30px;
+}
+.main-button.black{
+  background-color: black;
+  color: white;
+}
+.chicago{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+  gap: 30px;
+  border-bottom: 10px solid #495E57;
+}
+.chicago img{
+width: 200px;
+height: 300px;
+
+}
+.chicago div{
+  flex: 1;
+  justify-content: center;
+}
+.image-container{
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-left: 100px;
+  margin-bottom: 100px;
+}
+
+.overlay-image {
+  position: relative;
+  bottom: -100px; /* Adjust as needed */
+  right: 75px; /* Adjust as needed */
+  z-index: 1; /* Make sure the image is above the background */
+  object-fit: cover;
+  object-position: -200px;
+}
+.background-image{
+  z-index: 0;
+  transition: transform 1s ease-in-out;
+}
+.background-image:hover{
+  animation: moveRight 0.5s forwards;
+  transition: transform 1s ease-in-out;
+}
+
+@keyframes moveRight {
+  50% {
+    transform: translateX(-80px);
+    z-index: 0; /* Move 10px to the right */
   }
-  to {
-    transform: rotate(360deg);
+  51% {
+    z-index: 2;
+  }
+  100% {
+    z-index: 2;
+    transform: translateX(0); /* Return to original position */
   }
 }

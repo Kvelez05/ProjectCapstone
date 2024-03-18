@@ -19,7 +19,7 @@ export default function Nav() {
               <Link to="/" className="nav-item">Menu</Link>
             </li>
             <li className='nav-item4'>
-              <Link to="/" className="nav-item">Reservations</Link>
+              <Link to="/booking-page" className="nav-item">Reservations</Link>
             </li>
             <li className='nav-item5'>
               <Link to="/" className="nav-item">Order Online</Link>

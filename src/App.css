@@ -137,6 +137,7 @@ footer {
 }
 .call-to-action{
   display: flex;
+  flex-wrap: wrap;
   color: #F4CE14;
   background-color: #495E57;
   background-clip: content-box;
